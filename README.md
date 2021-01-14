@@ -7,17 +7,6 @@ For the last two weeks while at The Tech Academy, I worked with a team of colleg
 
 The missing photo story required me to create a modal that allowed the user to add a photo if one was not placed when creating it initially. Clicking the add photo button will bring up the modal and allow the user to search through their files for a picture to upload and save.
 
-if (Model.models_missing_photos.CastMembers.Count() > 0)
-        {
-            <p class="h5">Cast Members:</p>
-            foreach (var castMembers in (List<TheatreCMS.Models.CastMember>)ViewData["CastMembersWithoutPhotos"])
-            {
-                <p class="dashboard-subsection">
-                    @castMembers.Name
-                    <span class="dashboard-badges mx-3">
-                        @Html.ActionLink("Edit", "Edit", "CastMembers", new { id = castMembers.CastMemberID }, new { @class = "badge badge-pill" }) |
-                        @Html.ActionLink("Delete", "Delete", "CastMembers", new { id = castMembers.CastMemberID }, new { @class = "badge badge-pill" })
-
 
                         <button type="button" class="badge bdge-pill" data-toggle="modal" data-target="#addPhotoModal">Add Photo</button>
                     </span>
